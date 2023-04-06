@@ -24,4 +24,5 @@ This is a classification repository for movie review datasets using rnn, cnn, an
 
 Also, I wrote & studied it while referring to this person's code.
 - https://github.com/kh-kim
+
 Many thanks to him
