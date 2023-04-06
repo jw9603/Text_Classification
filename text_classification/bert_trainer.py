@@ -3,7 +3,7 @@ import torch.nn.utils as torch_utils
 
 from ignite.engine import Events
 
-from my_ntc.utils import get_grad_norm, get_parameter_norm
+from text_classification.utils import get_grad_norm, get_parameter_norm
 
 VERBOSE_SLIENT = 0
 VERBOSE_EPOCH_WISE = 1
