@@ -57,6 +57,33 @@ class EngineForBERT(MyEngine):
             '|param|': p_norm,
             '|g_param|': g_norm,
         }
+    
+    @staticmethod
+    def validate(engine, mini_batch):
+        engine.model.eval()
+
+        with torch.no_grad():
+            x, y = mini_batch['input_ids'], mini_batch['labels']
+            x, y = x.to(engine.device), y.to(engine.device)
+            mask = mini_batch['attention_mask']
+            mask = mask.to(engine.device)
+
+            x = x[:, :engine.config.max_length]
+
+            # Take feed-forward
+            y_hat = engine.model(x, attention_mask=mask).logits
+
+            loss = engine.crit(y_hat, y)
+
+            if isinstance(y, torch.LongTensor) or isinstance(y, torch.cuda.LongTensor):
+                accuracy = (torch.argmax(y_hat, dim=-1) == y).sum() / float(y.size(0))
+            else:
+                accuracy = 0
+
+        return {
+            'loss': float(loss),
+            'accuracy': float(accuracy),
+        }
 
 
 class BERTTrainer(Trainer):
