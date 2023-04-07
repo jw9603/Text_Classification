@@ -13,6 +13,9 @@ pip install torch_optimizer
 conda install -c pytorch torchtext==0.10.0
 conda install ignite -c pytorch
 ```
+```
+bash ./setup.sh
+```
 ### 1. Download data
 
 Data on movie reviews has been crawled and saved as tsv files. 
@@ -35,7 +38,9 @@ positive	지인추천으로 샀어요~ 싸고 가성비 좋다해서 낮기저�
 ### 2. Tokenization (Optional)
 
 You need to tokenize sentences in the corpus. You need to select your own tokenizer based on the language. (e.g. Mecab for Korean)
-
+```
+bash tokenize.sh
+```
 
 
 
