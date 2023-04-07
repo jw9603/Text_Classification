@@ -16,6 +16,7 @@ conda install ignite -c pytorch
 ### 1. Download data
 
 Data on movie reviews has been crawled and saved as tsv files. 
+
 The first column is the label (positive or negative), and the second column is the review content.
 
 
