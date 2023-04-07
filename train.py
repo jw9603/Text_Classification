@@ -75,7 +75,7 @@ def main(config):
             input_size=vocab_size,
             word_vec_size=config.word_vec_size,
             hidden_size=config.hidden_size,
-            n_classes=n_classes,
+            n_class=n_classes,
             n_layers=config.n_layers,
             dropout_p=config.dropout,
         )
