@@ -20,7 +20,7 @@ class RNNClassifier(nn.Module):
         self.rnn = nn.LSTM(input_size=word_vec_size,
                            hidden_size=hidden_size,
                            num_layers=n_layers,
-                           dropout_p=dropout_p,
+                           dropout=dropout_p,
                            batch_first=True,
                            bidirectional=True)
         self.gen = nn.Linear(hidden_size*2, n_class) # because of bidirectional LSTM
