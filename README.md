@@ -4,7 +4,7 @@ This is a classification repository for movie review datasets using rnn, cnn, an
 It is still incomplete.
 ## Usage
 ### 0. Dependencies
-Run the following commands to create a conda environment (assuming CUDA10.1):
+Run the following commands to create a conda environment (assuming RTX A6000):
 ```bash
 conda create -n ntc python=3.8 ipykernel
 source activate ntc
@@ -13,7 +13,9 @@ pip install torch_optimizer
 conda install -c pytorch torchtext==0.10.0
 conda install ignite -c pytorch
 ```
+### 1. Download data
 
+Data on movie reviews has been crawled and saved as tsv files. The first column is the label (positive or negative), and the second column is the review content.
 
 
 
