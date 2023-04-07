@@ -38,6 +38,8 @@ positive	지인추천으로 샀어요~ 싸고 가성비 좋다해서 낮기저�
 ### 2. Tokenization (Optional)
 
 You need to tokenize sentences in the corpus. You need to select your own tokenizer based on the language. (e.g. Mecab for Korean)
+
+Bert can do tokenization from the library in huggingface.
 ```
 bash tokenize.sh
 ```
