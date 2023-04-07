@@ -17,7 +17,7 @@ conda install ignite -c pytorch
 
 Data on movie reviews has been crawled and saved as tsv files. 
 
-The first column is the label (positive or negative), and the second column is the review content.
+The first column is the label (positive or negative), and the second column is the review corpus.
 
 ```bash
 positive	나름 괜찬항요 막 엄청 좋은건 아님 그냥 그럭저럭임... 아직 까지 인생 디퓨져는 못찾은느낌
@@ -32,9 +32,9 @@ positive	13개월 아가 제일좋은 간식이네요
 positive	지인추천으로 샀어요~ 싸고 가성비 좋다해서 낮기저귀로 써보려구요~
 ```
 
+### 2. Tokenization (Optional)
 
-
-
+You need to tokenize sentences in the corpus. You need to select your own tokenizer based on the language. (e.g. Mecab for Korean)
 
 
 
