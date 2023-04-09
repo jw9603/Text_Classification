@@ -46,6 +46,7 @@ bash tokenize.sh
 ```
 ### 3. Train
 Shell script files have arbitrarily fixed hyperparameters, but you can change them as you like.
+
 For RNN, run
 ```
 bash run_rnn.sh
