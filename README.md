@@ -54,7 +54,7 @@ bash run_cnn.sh
 ```
 For BERT, run
 ```
-bash run_rnn.sh
+bash run_bert.sh
 ```
 
 
