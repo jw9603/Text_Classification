@@ -43,8 +43,11 @@ Bert can do tokenization from the library in huggingface.
 ```
 bash tokenize.sh
 ```
-
-
+### 3. Train
+For RNN, run
+```
+bash tokenize.sh
+```
 
 
 
