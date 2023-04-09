@@ -49,9 +49,13 @@ For RNN, run
 bash run_rnn.sh
 ```
 For CNN, run
-'''
+```
 bash run_cnn.sh
-'''
+```
+For BERT, run
+```
+bash run_rnn.sh
+```
 
 
 ## Reference
