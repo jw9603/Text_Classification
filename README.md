@@ -46,9 +46,12 @@ bash tokenize.sh
 ### 3. Train
 For RNN, run
 ```
-bash tokenize.sh
+bash run_rnn.sh
 ```
-
+For CNN, run
+'''
+bash run_cnn.sh
+'''
 
 
 ## Reference
