@@ -58,6 +58,21 @@ For BERT, run
 bash run_bert.sh
 ```
 
+Rnn and Cnn are learned through train.py, and the arguments are as follows.
+```
+$ python train.py --asdf
+usage: train.py [-h] --model_fn MODEL_FN --train_fn TRAIN_FN [--gpu_id GPU_ID] [--verbose VERBOSE] [--min_vocab_freq MIN_VOCAB_FREQ] [--max_vocab_size MAX_VOCAB_SIZE] [--batch_size BATCH_SIZE]
+                [--n_epochs N_EPOCHS] [--word_vec_size WORD_VEC_SIZE] [--dropout DROPOUT] [--max_length MAX_LENGTH] [--rnn] [--hidden_size HIDDEN_SIZE] [--n_layers N_LAYERS] [--cnn] [--use_batch_norm]
+                [--window_sizes [WINDOW_SIZES [WINDOW_SIZES ...]]] [--n_filters [N_FILTERS [N_FILTERS ...]]]
+train.py: error: the following arguments are required: --model_fn, --train_fn
+```
+Similarly, BERT is learned with finetune_native.py, and the arguments are as follows.
+```
+$ python finetune_native.py --asdf
+usage: finetune_native.py [-h] --model_fn MODEL_FN --train_fn TRAIN_FN [--pretrained_model_name PRETRAINED_MODEL_NAME] [--use_albert] [--gpu_id GPU_ID] [--verbose VERBOSE] [--batch_size BATCH_SIZE]
+                          [--n_epochs N_EPOCHS] [--lr LR] [--warmup_ratio WARMUP_RATIO] [--adam_epsilon ADAM_EPSILON] [--use_radam] [--valid_ratio VALID_RATIO] [--max_length MAX_LENGTH]
+finetune_native.py: error: the following arguments are required: --model_fn, --train_f
+```
 
 ## Reference
 
