@@ -88,7 +88,7 @@ order
 3. make_ground_truth.sh
 - make ground_truth test data included with only columns(labels)
 4. get_accuracy.sh
-
+- take the Accuracy
 
 ## Reference
 
