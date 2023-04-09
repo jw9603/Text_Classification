@@ -51,6 +51,10 @@ For RNN, run
 ```
 bash run_rnn.sh
 ```
+For ensemble(RNN+CNN), run
+```
+bash run.sh
+```
 For CNN, run
 ```
 bash run_cnn.sh
