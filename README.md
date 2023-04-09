@@ -79,6 +79,16 @@ usage: finetune_native.py [-h] --model_fn MODEL_FN --train_fn TRAIN_FN [--pretra
                           [--n_epochs N_EPOCHS] [--lr LR] [--warmup_ratio WARMUP_RATIO] [--adam_epsilon ADAM_EPSILON] [--use_radam] [--valid_ratio VALID_RATIO] [--max_length MAX_LENGTH]
 finetune_native.py: error: the following arguments are required: --model_fn, --train_f
 ```
+### 4. Evaluate trained model
+order
+1. eval_{model}.sh
+- Look the real result in-person.
+2. make_test_{model}.sh
+- make the result text file included with only columns(labels)
+3. make_ground_truth.sh
+- make ground_truth test data included with only columns(labels)
+4. get_accuracy.sh
+
 
 ## Reference
 
