@@ -96,7 +96,4 @@ order
 - Devlin et al., BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding, ACL, 2019
 - [Lee, KcBERT: Korean comments BERT, GitHub, 2020](https://github.com/Beomi/KcBERT)
 
-Also, I wrote & studied it while referring to this his code.
-- https://github.com/kh-kim
 
-Many thanks to him
