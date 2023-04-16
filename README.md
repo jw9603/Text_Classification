@@ -86,7 +86,7 @@ finetune_native.py: error: the following arguments are required: --model_fn, --t
 
 The order is as follows.
 
-1. eval_{model}.sh
+#### 4-1. eval_{model}.sh
 - Look the real result in-person.
 ```
 bash eval_{}.sh
@@ -184,10 +184,10 @@ positive        상품은 만족스럽고 배송도 빠르고 좋아요
 positive        가성비 짱가성비 짱가성비 짱가성비 짱 가성비 짱 가성비 짱 가성비 짱 가성비 짱 가성비 짱 가성비 짱 가성비 짱 가성비 짱 가성비 짱 가성비 짱 가성비 짱 가성비 짱 가성비 짱 가성비 짱 가성비 짱 가성비 짱 가성비 짱 가성비 짱 가성비 짱 가성비 짱 가성비 짱 가성비 짱
 positive        저렴하게 잘 구매했습니당
 ```
-2. make_test_{model}.sh
+#### 4-2. make_test_{model}.sh
 - make the result text file included with only columns(labels)
 
-3. make_ground_truth.sh
+#### 4-3. make_ground_truth.sh
 - make ground_truth test data included with only columns(labels)
 
 ```plain
@@ -199,10 +199,31 @@ positive        저렴하게 잘 구매했습니당
     ├── rnn_result.txt/
     ├── ensemble_result.txt/
     └── bert_result.txt/
+├── result_model/
+├── text_classification/
+├── ...
 ```
 
-4. get_accuracy.sh
+#### 4-4. get_accuracy.sh
 - take the Accuracy
+```
+python ./get_accuracy.py ./model/review.native.kcbert.20230406_231408.pth.result.txt ./model/ground_truth.result.txt
+```
+##### Trained model Results
+
+BERT
+<table>
+  <tr>
+    <th>Trained model</th>
+    <th>Test acc.</th>
+  </tr>
+  <tr>
+    <th>RoBERTa-large + QA-GNN <a href="">[link]</a></th>
+    <th>0.9036</th>
+    
+  </tr>
+</table>
+
 
 ## Reference
 
