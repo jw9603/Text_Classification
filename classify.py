@@ -5,14 +5,13 @@ import torch
 import torch.nn as nn
 from torchtext import data
 import torchtext
-version = list(map(int,torchtext.__version__.split('.')))
+from my_ntc.models.rnn import RNNClassifier
+from my_ntc.models.cnn import CNNClassifier
+version = list(map(int, torchtext.__version__.split('.')))
 if version[0] <= 0 and version[1] < 9:
     from torchtext import data
 else:
     from torchtext.legacy import data
-from my_ntc.models.rnn import RNNClassifier
-from my_ntc.models.cnn import CNNClassifier
-
 
 def define_argparser():
     '''
@@ -26,7 +25,9 @@ def define_argparser():
     p.add_argument('--top_k', type=int, default=1)
     p.add_argument('--max_length', type=int, default=256)
     
-    p.add_argument('--drop_rnn', action='store_true')
+    p.add_argument('--drop_rnn', action='store_true') # store_true : 인자를 적으면(값을 주지 않는다) 해당 인자에 true나 false가 저장된다.
+    # store_true의 경우 default 값은 false이며, 인자를 적어 주면 true가 저장된다.
+    # store_false의 경우 반대이다.
     p.add_argument('--drop_cnn', action='store_true')
 
     config = p.parse_args()
@@ -71,6 +72,7 @@ def main(config):
         config.model_fn,
         map_location='cpu' if config.gpu_id < 0 else 'cuda:%d' % config.gpu_id
     )
+#     print(saved_data) # check saved model
 
     train_config = saved_data['config']
     rnn_best = saved_data['rnn']
@@ -157,3 +159,4 @@ def main(config):
 if __name__ == '__main__':
     config = define_argparser()
     main(config)
+
