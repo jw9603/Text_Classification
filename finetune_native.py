@@ -13,9 +13,9 @@ from transformers import get_linear_schedule_with_warmup
 
 import torch_optimizer as custom_optim
 
-from my_ntc.bert_trainer import BERTTrainer as Trainer
-from my_ntc.bert_dataset import TextClassificationDataset, TextClassificationCollator
-from my_ntc.utils import read_text
+from text_classification.bert_trainer import BERTTrainer as Trainer
+from text_classification.bert_dataset import TextClassificationDataset, TextClassificationCollator
+from text_classification.utils import read_text
 
 def define_argparser():
     
