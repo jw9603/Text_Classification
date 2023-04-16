@@ -209,7 +209,7 @@ positive        저렴하게 잘 구매했습니당
 ```
 python ./get_accuracy.py ./model/review.native.kcbert.20230406_231408.pth.result.txt ./model/ground_truth.result.txt
 ```
-##### Trained model Results
+- Trained model Results
 
 <table>
   <tr>
@@ -255,10 +255,16 @@ python ./get_accuracy.py ./model/review.native.kcbert.20230406_231408.pth.result
     
   </tr>
 </table>
-## Reference
 
+## Reference
+- https://github.com/kh-kim
 - Kim, Convolutional neural networks for sentence classification, EMNLP, 2014
 - Devlin et al., BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding, ACL, 2019
 - [Lee, KcBERT: Korean comments BERT, GitHub, 2020](https://github.com/Beomi/KcBERT)
 
-
+## Acknowledgement
+This repo is built upon the following work:
+```
+https://github.com/kh-kim/simple-ntc
+```
+Many thanks to him.
