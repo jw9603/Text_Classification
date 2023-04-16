@@ -99,7 +99,7 @@ classify_plm.py: error: the following arguments are required: --model_fn
 The order is as follows.
 
 #### 4-1. eval_{model}.sh
-- Look the real result in-person.
+- ** Look the real result in-person. **
 ```
 bash eval_{model}.sh
 ```
@@ -197,10 +197,10 @@ positive        가성비 짱가성비 짱가성비 짱가성비 짱 가성비 �
 positive        저렴하게 잘 구매했습니당
 ```
 #### 4-2. make_test_{model}.sh
-- make the result text file included with only columns(labels)
+- ** make the result text file included with only columns(labels) **
 
 #### 4-3. make_ground_truth.sh
-- make ground_truth test data included with only columns(labels)
+- ** make ground_truth test data included with only columns(labels) **
 
 ```plain
 .
@@ -217,7 +217,7 @@ positive        저렴하게 잘 구매했습니당
 ```
 
 #### 4-4. get_accuracy.sh
-- take the Accuracy
+- ** take the Accuracy **
 ```
 python ./get_accuracy.py ./model/review.native.kcbert.20230406_231408.pth.result.txt ./model/ground_truth.result.txt
 ```
