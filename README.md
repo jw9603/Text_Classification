@@ -83,13 +83,25 @@ usage: finetune_native.py [-h] --model_fn MODEL_FN --train_fn TRAIN_FN [--pretra
 finetune_native.py: error: the following arguments are required: --model_fn, --train_f
 ```
 ### 4. Evaluate trained model
+In the test process, classify.py and classify_plm are used, and the arguments are as follows.
 
+```
+$ python classify.py --asdf
+usage: classify.py [-h] --model_fn MODEL_FN [--gpu_id GPU_ID] [--batch_size BATCH_SIZE] [--top_k TOP_K] [--max_length MAX_LENGTH] [--drop_rnn] [--drop_cnn]
+classify.py: error: the following arguments are required: --model_fn
+```
+```
+$ python classify_plm.py --asdf
+usage: classify_plm.py [-h] --model_fn MODEL_FN [--gpu_id GPU_ID] [--batch_size BATCH_SIZE] [--top_k TOP_K]
+classify_plm.py: error: the following arguments are required: --model_fn
+(ntc) jiwon@ldl76:~/5-plm/simple-ntc$ 
+```
 The order is as follows.
 
 #### 4-1. eval_{model}.sh
 - Look the real result in-person.
 ```
-bash eval_{}.sh
+bash eval_{model}.sh
 ```
 - Since 20 sentences were selected and shuffling was performed, you can see the results of different sentences each time.
 - The result is : 
