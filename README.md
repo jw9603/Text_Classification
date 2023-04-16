@@ -186,8 +186,21 @@ positive        저렴하게 잘 구매했습니당
 ```
 2. make_test_{model}.sh
 - make the result text file included with only columns(labels)
+
 3. make_ground_truth.sh
 - make ground_truth test data included with only columns(labels)
+
+```plain
+.
+├── README.md
+├── model/
+    ├── ground_truth.result.txt/                 (ground_truth)
+    ├── cnn_result.txt/
+    ├── rnn_result.txt/
+    ├── ensemble_result.txt/
+    └── bert_result.txt/
+```
+
 4. get_accuracy.sh
 - take the Accuracy
 
