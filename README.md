@@ -64,6 +64,8 @@ For BERT, run
 bash run_bert.sh
 ```
 
+However, since both rnn and cnn models were learned through ensemble learning(run.sh), if drop_cnn or drop_rnn factor is given in the test process,
+there is no need to learn rnn and cnn separately.
 Rnn and Cnn are learned through train.py, and the arguments are as follows.
 ```
 $ python train.py --asdf
@@ -80,7 +82,9 @@ usage: finetune_native.py [-h] --model_fn MODEL_FN --train_fn TRAIN_FN [--pretra
 finetune_native.py: error: the following arguments are required: --model_fn, --train_f
 ```
 ### 4. Evaluate trained model
-order
+
+The order is as follows.
+
 1. eval_{model}.sh
 - Look the real result in-person.
 2. make_test_{model}.sh
