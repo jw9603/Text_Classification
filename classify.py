@@ -4,7 +4,12 @@ import argparse
 import torch
 import torch.nn as nn
 from torchtext import data
-
+import torchtext
+version = list(map(int,torchtext.__version__.split('.')))
+if version[0] <= 0 and version[1] < 9:
+    from torchtext import data
+else:
+    from torchtext.legacy import data
 from my_ntc.models.rnn import RNNClassifier
 from my_ntc.models.cnn import CNNClassifier
 
