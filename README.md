@@ -211,20 +211,50 @@ python ./get_accuracy.py ./model/review.native.kcbert.20230406_231408.pth.result
 ```
 ##### Trained model Results
 
-BERT
 <table>
   <tr>
     <th>Trained model</th>
     <th>Test acc.</th>
   </tr>
   <tr>
-    <th>RoBERTa-large + QA-GNN <a href="">[link]</a></th>
+    <th>Bidirectional LSTM <a href="">[link]</a></th>
     <th>0.9036</th>
     
   </tr>
 </table>
-
-
+<table>
+  <tr>
+    <th>Trained model</th>
+    <th>Test acc.</th>
+  </tr>
+  <tr>
+    <th>CNN <a href="">[link]</a></th>
+    <th>0.9093</th>
+    
+  </tr>
+</table>
+<table>
+  <tr>
+    <th>Trained model</th>
+    <th>Test acc.</th>
+  </tr>
+  <tr>
+    <th>Ensemble <a href="">[link]</a></th>
+    <th>0.9146</th>
+    
+  </tr>
+</table>
+<table>
+  <tr>
+    <th>Trained model</th>
+    <th>Test acc.</th>
+  </tr>
+  <tr>
+    <th>BERT <a href="">[link]</a></th>
+    <th>0.9598</th>
+    
+  </tr>
+</table>
 ## Reference
 
 - Kim, Convolutional neural networks for sentence classification, EMNLP, 2014
