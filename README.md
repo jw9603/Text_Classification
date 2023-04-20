@@ -279,4 +279,4 @@ This repo is built upon the following work:
 ```
 https://github.com/kh-kim/simple-ntc
 ```
-Many thanks to him.
+Many thanks to him!!
