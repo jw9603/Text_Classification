@@ -42,11 +42,11 @@ class TextClassificationDataset(Dataset):
        # __getitem__(self, index) : Method that returns the "index"th data. It should return tensor
     
     def __init__(self,x,y):
-        self.x = x
-        self.y = y
+        self.x = x # text
+        self.y = y # label
     
     def __len__(self):
-        return len(self.x)
+        return len(self.x) # len(text)
     
     # When putting the dataset into the data loader, it creates a mini-batch whenever necessary and returns it at every iteration. -> getitem
     def __getitem__(self,index):
