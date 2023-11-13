@@ -16,7 +16,7 @@ class EngineForBERT(MyEngine):
     def __init__(self,func,model,crit,optimizer,scheduler,config):
         self.scheduler = scheduler
         
-        super().__init__(func,model,crit,optimizer,config)
+        super().__init__(func,model,crit,optimizer,config) # 부모 클래스에 전달할 input을 적는다.
         
     @staticmethod # 클래스에서 인스턴스를 부르지 않고 바로 메서드를 부를 수 있음
     def train(engine,mini_batch):
