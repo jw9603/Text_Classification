@@ -1,7 +1,7 @@
 # Pytorch_Text_Classification
 This is a classification repository for movie review datasets using rnn, cnn, and bert.
 
-It is still incomplete.
+
 ## Usage
 ### 0. Dependencies
 Run the following commands to create a conda environment (assuming RTX A6000):
