@@ -19,7 +19,6 @@ bash ./setup.sh
 ```
 ### 1. Download data
 
-https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=126
 
 Data on movie reviews has been crawled and saved as tsv files. 
 
